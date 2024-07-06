@@ -29,7 +29,7 @@ with st.sidebar:
     ---
     ''')
 
-    st.markdown('👨‍💻 Create by [**Hir Patel **](https://github.com/HIRU1920/)')
+    st.markdown('👨‍💻 Create by [ 🤖 Hir Patel 🤖 ](https://github.com/HIRU1920/)')
 
 col1, col2 = st.columns(2)
 
