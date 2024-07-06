@@ -6,7 +6,7 @@ st.set_page_config(page_title="WazirX", layout="wide", page_icon='🔐')
 
 with st.sidebar:
     st.image("https://ibb.co/hW9ybcC")
-    st.markdown('# 💬 Encrypt and Decrypt your messages with CryptX🔐')
+    st.markdown('# 💬 Encrypt and Decrypt your messages with WazirX🔐')
     st.markdown('''
     ---
     ### 💻 How does it work ?
