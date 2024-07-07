@@ -3,7 +3,7 @@ import base64
 
 def generate_keys(message):
     message_length = len(message)
-    key_length = message_length * 16  # Assuming 16 bits per character
+    key_length = message_length * 8  # Assuming 16 bits per character
     
     public_key = random.randint(1, 2**key_length - 1)  # Generating a random public key based on message length
     private_key_bytes = random.randbytes(16)  # Generating 16 random bytes for private key
@@ -25,7 +25,7 @@ def encrypt_message(modified_message):
     encrypted_message = []
     for char in modified_message:
         ascii_value = ord(char)
-        encrypted_char = chr(ascii_value + 4)  # Add 4 to the ASCII value
+        encrypted_char = chr(ascii_value + 2)  # Add 4 to the ASCII value
         encrypted_message.append(encrypted_char)
     return ''.join(encrypted_message)
 
@@ -33,7 +33,7 @@ def decrypt_message(encrypted_message):
     decrypted_message = []
     for char in encrypted_message:
         ascii_value = ord(char)
-        decrypted_char = chr(ascii_value - 4)  # Subtract 4 from the ASCII value
+        decrypted_char = chr(ascii_value - 2)  # Subtract 4 from the ASCII value
         decrypted_message.append(decrypted_char)
     decrypted_message = ''.join(decrypted_message)
     
